@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import GlobalStyle from "./styles/GlobalStyle.jsx";
-import QuestionCard from "./components/QuestionCard.jsx";
-import MessageList from "./components/MessageList.jsx";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+
+import MessageList from "./components/MessageList.jsx";
+import QuestionCard from "./components/QuestionCard.jsx";
+import GlobalStyle from "./styles/GlobalStyle.jsx";
 
 const LoadingWrapper = styled.div`
   display: flex;
@@ -78,14 +79,19 @@ export const App = () => {
   return (
     <>
       <GlobalStyle />
-      <h1>Happy Thoughts</h1>
-      <QuestionCard
-        messageText={messageText}
-        setMessageText={setMessageText}
-        handleMessage={handleMessage}
-        error={error}
-      />
-      <MessageList thoughts={thoughts} />
+      <header>
+        <h1>Happy Thoughts</h1>
+      </header>
+
+      <main>
+        <QuestionCard
+          messageText={messageText}
+          setMessageText={setMessageText}
+          handleMessage={handleMessage}
+          error={error}
+        />
+        <MessageList thoughts={thoughts} />
+      </main>
     </>
   );
 };
