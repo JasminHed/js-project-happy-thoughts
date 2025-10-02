@@ -80,7 +80,7 @@ const MessageCard = ({ message }) => {
   //sends or post "like" to API so it can update
   const handleLike = () => {
     fetch(
-      `https://happy-thoughts-api-4ful.onrender.com/${message._id}/like`,
+      `https://happy-thoughts-api-4ful.onrender.com/thoughts/${message._id}/like`,
       {
         method: "POST",
       }
