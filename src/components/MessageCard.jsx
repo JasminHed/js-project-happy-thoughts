@@ -1,6 +1,6 @@
+import moment from "moment";
 import { useState } from "react";
 import styled from "styled-components";
-import moment from "moment";
 
 const CardWrapper = styled.section`
   display: flex;
@@ -80,7 +80,7 @@ const MessageCard = ({ message }) => {
   //sends or post "like" to API so it can update
   const handleLike = () => {
     fetch(
-      `https://happy-thoughts-ux7hkzgmwa-uc.a.run.app/thoughts/${message._id}/like`,
+      `https://happy-thoughts-api-4ful.onrender.com/${message._id}/like`,
       {
         method: "POST",
       }
