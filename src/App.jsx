@@ -22,7 +22,7 @@ export const App = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch("https://happy-thoughts-api-4ful.onrender.com/")
+    fetch("https://happy-thoughts-api-4ful.onrender.com/thoughts")
       .then((response) => {
         if (!response.ok) {
           throw new Error("No more thoughts today");
@@ -50,7 +50,7 @@ export const App = () => {
       return;
     }
 
-    fetch("https://happy-thoughts-api-4ful.onrender.com/", {
+    fetch("https://happy-thoughts-api-4ful.onrender.com/thoughts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
